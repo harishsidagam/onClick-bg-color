@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onClick-Bg</title>
+    <style>
+        button{
+            margin:0px;
+            padding: 0px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button>Click to Change Bg-color</button>
+    </div>
+</body>
+<script>
+     let color =['#00FFFF','#FFEBCD','#A52A2A','#7FFF00','#DC143C','#FF8C00','gold','#FF6347']
+   let i;
+     let btn = document.querySelector('button')
+      btn.addEventListener("click",()=>{
+          i= i<color.length ? ++i:0
+       document.querySelector('body').style.background= color[i]
+      })
+</script>
+</html>
